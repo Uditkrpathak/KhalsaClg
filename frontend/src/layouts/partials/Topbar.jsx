@@ -6,7 +6,7 @@ const Topbar = () => {
   // This will be controlled by admin in the future
   const admissionText = "Admission open for the year 2026-27";
   const phoneNumber = "9988095610";
-  
+
   const socialLinks = [
     { icon: FaFacebook, url: '#', label: 'Facebook' },
     { icon: FaInstagram, url: '#', label: 'Instagram' },
@@ -19,15 +19,15 @@ const Topbar = () => {
     <div className="bg-[#3055ba] text-white py-2">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap items-center justify-between text-sm">
+          
           {/* Left Section - Online Payment */}
           <div className="flex items-center gap-4">
-            <span className="font-medium hover:text-white/90 cursor-pointer transition-colors">
-              <Link
-                to='/online-payment'
-              >
-                Online Payment
-              </Link>
-            </span>
+            <Link
+              to="/online-payment"
+              className="font-medium hover:text-white/90 cursor-pointer transition-colors"
+            >
+              Online Payment
+            </Link>
           </div>
 
           {/* Center Section - Admission Notice */}
@@ -38,10 +38,12 @@ const Topbar = () => {
           </div>
 
           {/* Right Section - Contact & Social Links */}
-          <div className="flex items-center gap-4">
+          {/* Hidden below 700px */}
+          <div className="flex items-center gap-4 max-[700px]:hidden">
+            
             {/* Phone Number */}
-            <a 
-              href={`tel:${phoneNumber}`} 
+            <a
+              href={`tel:${phoneNumber}`}
               className="flex items-center gap-2 hover:text-white/90 transition-colors"
             >
               <FaPhone className="text-xs" />
@@ -67,6 +69,7 @@ const Topbar = () => {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -74,4 +77,3 @@ const Topbar = () => {
 };
 
 export default Topbar;
-//hahahaha
