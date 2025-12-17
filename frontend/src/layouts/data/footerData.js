@@ -1,0 +1,48 @@
+export const footerSections = [
+  {
+    title: "Admissions",
+    links: [
+      "Downloadable Brochures",
+      "Important Contact Numbers",
+      "Application Form Sale Outlets",
+      "Admission Procedure",
+      "Fee Structure",
+      "International Students",
+      "Downloadable Forms & Formats",
+      "FAQ",
+    ],
+  },
+  {
+    title: "Important Info",
+    links: [
+      "Grievance Redressal",
+      "NIRF Report",
+      "National Academic Depository (NAD)",
+      "University NAD Cell",
+      "UGC Mandatory Disclosures",
+      "Academic Bank of Credits (ABC)",
+      "Request for Educational Verification",
+      "RTI",
+      "Scholarship",
+      "IQAC",
+      "SWAYAM",
+    ],
+  },
+  {
+    title: "Explore",
+    links: [
+      "Chitkara Educational Trust",
+      "Chitkara University, Punjab",
+      "Chitkara University, Himachal Pradesh",
+      "Chitkara International School",
+      "Centre for Global Education",
+      "Office of International Affairs",
+      "Career Advancement Services",
+      "Alumni Association Network",
+      "Office of Student Affairs",
+      "University Sports Board",
+      "Blogs",
+      "Initiatives for SDGs",
+    ],
+  },
+];
