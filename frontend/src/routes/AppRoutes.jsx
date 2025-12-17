@@ -10,6 +10,7 @@ import AdminDashboard from "../dashboards/admin/pages/AdminDashboard";
 import UserDashboard from "../dashboards/user/pages/UserDashboard";
 
 import ProtectedRoute from "../components/common/ProtectedRoute";
+import Login from "../pages/Login";
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
       {/* ===== Public Routes ===== */}
       <Route element={<MainLayout />}>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login/>} />
       </Route>
 
       {/* ===== Admin Dashboard ===== */}
@@ -35,9 +37,9 @@ const AppRoutes = () => {
 
       {/* ===== User Dashboard ===== */}
       <Route
-        path="/user"
+        path="/student"
         element={
-          <ProtectedRoute role="user">
+          <ProtectedRoute role="student">
             <DashboardLayout />
           </ProtectedRoute>
         }
