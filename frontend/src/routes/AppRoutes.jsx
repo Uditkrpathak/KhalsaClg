@@ -6,8 +6,8 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 
-import AdminDashboard from "../dashboards/admin/pages/AdminDashboard";
-import UserDashboard from "../dashboards/user/pages/UserDashboard";
+// import AdminDashboard from "../dashboards/admin/pages/AdminDashboard";
+// import UserDashboard from "../dashboards/user/pages/UserDashboard";
 
 import ProtectedRoute from "../components/common/ProtectedRoute";
 import Login from "../pages/Login";
@@ -23,7 +23,7 @@ const AppRoutes = () => {
       </Route>
 
       {/* ===== Admin Dashboard ===== */}
-      <Route
+      {/* <Route
         path="/admin"
         element={
           <ProtectedRoute role="admin">
@@ -33,10 +33,10 @@ const AppRoutes = () => {
       >
         <Route index element={<AdminDashboard />} />
         <Route path="*" element={<NotFound />} />
-      </Route>
+      </Route> */}
 
       {/* ===== User Dashboard ===== */}
-      <Route
+      {/* <Route
         path="/student"
         element={
           <ProtectedRoute role="student">
@@ -46,7 +46,7 @@ const AppRoutes = () => {
       >
         <Route index element={<UserDashboard />} />
         <Route path="*" element={<NotFound />} />
-      </Route>
+      </Route> */}
 
       {/* ===== Global 404 ===== */}
       <Route path="*" element={<NotFound />} />
