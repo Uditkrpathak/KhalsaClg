@@ -13,9 +13,9 @@
 
 @layer base {
   body {
-    @apply font-sans bg-white text-gray-800;
+    @apply font-sans bg-white text-black;
   }
   h1 {
-    @apply text-3xl font-bold;
+    /* @apply text-3xl font-bold; */
   }
 }
