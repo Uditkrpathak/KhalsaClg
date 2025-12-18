@@ -7,7 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-routes(app);
+app.use("/api", routes);
+
 app.use(errorMiddleware);
 
 export default app;
