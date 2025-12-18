@@ -1,18 +1,23 @@
 import { Routes, Route } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
-import DashboardLayout from "../layouts/DashboardLayout";
 
 import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 
-// import AdminDashboard from "../dashboards/admin/pages/AdminDashboard";
-// import UserDashboard from "../dashboards/user/pages/UserDashboard";
+import AdminDashboard from "../dashboards/admin/pages/AdminDashboard";
+import AddStudent from "../dashboards/admin/pages/AddStudent";
+import AddAdmin from "../dashboards/admin/pages/AddAdmin";
+import StudentList from "../dashboards/admin/pages/StudentList";
+
+import StudentDashboard from "../dashboards/user/pages/StudentDashboard";
+
 import Gallery from "../layouts/Gallery/Gallery";
 import EventImages from "../layouts/Gallery/EventImages";
 import ProtectedRoute from "../components/common/ProtectedRoute";
 import Login from "../pages/Login";
 import ContactSection from "../pages/Contact";
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -27,30 +32,48 @@ const AppRoutes = () => {
       </Route>
 
       {/* ===== Admin Dashboard ===== */}
-      {/* <Route
+      <Route
         path="/admin"
         element={
           <ProtectedRoute role="admin">
-            <DashboardLayout />
+            <AdminDashboard />
           </ProtectedRoute>
         }
-      >
-        <Route index element={<AdminDashboard />} />
-        <Route path="*" element={<NotFound />} />
-      </Route> */}
+      />
+      <Route
+        path="/admin/add-student"
+        element={
+          <ProtectedRoute role="admin">
+            <AddStudent />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/add-admin"
+        element={
+          <ProtectedRoute role="admin">
+            <AddAdmin />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/students"
+        element={
+          <ProtectedRoute role="admin">
+            <StudentList />
+          </ProtectedRoute>
+        }
+      />
 
-      {/* ===== User Dashboard ===== */}
-      {/* <Route
+      {/* ===== Student Dashboard ===== */}
+      <Route
         path="/student"
         element={
           <ProtectedRoute role="student">
-            <DashboardLayout />
+            <StudentDashboard />
           </ProtectedRoute>
         }
-      >
-        <Route index element={<UserDashboard />} />
-        <Route path="*" element={<NotFound />} />
-      </Route> */}
+      />
 
       {/* ===== Global 404 ===== */}
       <Route path="*" element={<NotFound />} />

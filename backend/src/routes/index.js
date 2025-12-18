@@ -1,9 +1,10 @@
+import express from 'express';
 import adminRoutes from "./admin.routes.js";
 import studentRoutes from "./student.routes.js";
 
-const routes = (app) => {
-  app.use("/admin", adminRoutes);
-  app.use("/student", studentRoutes);
-};
+const router = express.Router();
 
-export default routes;
+router.use("/admin", adminRoutes);
+router.use("/student", studentRoutes);
+
+export default router;
